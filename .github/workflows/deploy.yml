@@ -27,9 +27,6 @@ jobs:
       env:
         NODE_ENV: production
 
-    - name: Export static site
-      run: npx next export
-
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
